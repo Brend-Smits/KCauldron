@@ -5,10 +5,10 @@ import thermos.VersionParser
 
 buildscript {
     repositories {
-        maven {
+        /*maven {
             name 'prok'
             url 'https://repo.prok.pw/'
-        }
+        }*/
         maven {
             name 'forge'
             url 'http://files.minecraftforge.net/maven'
@@ -21,8 +21,13 @@ buildscript {
             name 'spigot'
             url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
         }
+		maven {
+            name 'spigot-public'
+            url 'https://hub.spigotmc.org/nexus/content/repositories/public/'
+        }
 
         mavenCentral()
+		mavenLocal()
     }
     dependencies {
 //        classpath files('FGS.jar')
@@ -45,10 +50,10 @@ repositories {
         name 'sonatype'
         url 'http://oss.sonatype.org/content/repositories/snapshots/'
     }
-    maven {
+    /*maven {
         name 'prok'
         url 'https://repo.prok.pw/'
-    }
+    }*/
     maven {
         name 'forge'
         url 'http://files.minecraftforge.net/maven'
@@ -61,8 +66,13 @@ repositories {
         name 'spigot'
         url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
     }
+	maven {
+        name 'spigot-public'
+        url 'https://hub.spigotmc.org/nexus/content/repositories/public/'
+    }
 
     mavenCentral()
+	mavenLocal()
 }
 
 minecraft {
@@ -322,10 +332,10 @@ tasks.generateProjectCauldron << {
     file.append('''
 repositories {
     clear()
-    maven {
+    /*maven {
         name 'prok'
         url 'https://repo.prok.pw/'
-    }
+    }*/
     maven {
         name 'forge'
         url 'http://files.minecraftforge.net/maven'
@@ -334,7 +344,12 @@ repositories {
         name 'minecraft'
         url 'https://libraries.minecraft.net/'
     }
+	maven {
+        name 'spigot-public'
+        url 'https://hub.spigotmc.org/nexus/content/repositories/public/'
+    }
     mavenCentral()
+	mavenLocal()
 }
 dependencies {
 ''')
