@@ -16,10 +16,10 @@
 +    {
 +        if (isSigning)
 +        {
-+            if(push.getTagCompound().hasKey("title"))
++            if(push.getTagCompound().hasKey("title", 8))
 +                stack.setTagInfo("title", new NBTTagString(push.getTagCompound().getString("title")));
 +        }
-+        if (push.getTagCompound().hasKey("pages",8))
++        if (push.getTagCompound().hasKey("pages",9))
 +            stack.setTagInfo("pages", push.getTagCompound().getTagList("pages", 8));
 +        return true;
 +        /*if (this.hasTagCompound() && par1.hasTagCompound())
