@@ -1978,7 +1978,7 @@
 +                push = packetbuffer.readItemStackFromBuffer();
  
 -                if (itemstack == null)
-+                if (push != null)
++                if (push == null)
                  {
                      return;
                  }
